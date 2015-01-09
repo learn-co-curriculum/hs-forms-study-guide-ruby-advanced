@@ -98,9 +98,9 @@ end
 
 Notice that the two arguments that we are feeding into the initialize (.new) method are the username ("Vanessa") and the status ("My first tweet!!!") from the `params` hash. 
 
-The next line after we've created our new tweet is `redirect('/tweets')`. Sinatra has a handy little method called redirect that takes in the route you want to redirect to as an argument. We are redirecting to the `get ‘/tweets’` method (which displays our `tweets.erb` template in the browser). If you had another route like `get '/home'` you could redirect to the home page instead with `redirect('/home')`.
+The next line after we've created our new tweet is `redirect('/tweets')`. Sinatra has a handy little method called redirect that takes in the route you want to redirect to as an argument.  We are redirecting to the `get ‘/tweets’` method (which displays our `tweets.erb` template in the browser). You POST your new tweet to the server (which creates a new instance of a tweet) and then you GET back the html displaying your tweets - including the new tweet you just created. The `post '/tweets'` and `get '/tweets'` requests are kind of like the front end and the back end of your application hitting a tennis ball (the tweet) back and forth. 
 
-As long as this `redirect` method is in the last line of our `post '/tweets'` route and the `get '/tweets'` method is set up properly with an erb template to display the tweets, this should go swimmingly.
+You don't necessarily need to redirect back to `get '/tweets'` though - you could redirect to `get '/home'` or `get '/users'` or wherever you wanted to send your user to next. Or you can even skip the redirect and display an erb template instead.
 
 Now that everything is set up, every time a user fills out the form to create a new tweet and hits the submit button the following steps will take place:
 
