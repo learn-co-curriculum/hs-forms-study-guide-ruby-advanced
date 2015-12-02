@@ -115,3 +115,5 @@ Try out the demo we've included in this walk-through by moving into the `demo` d
 
 **NB: You must be in the demo directory and you must use `rackup` NOT `shotgun` for this demo to work properly.** 
 
+
+<a href='https://learn.co/lessons/hs-forms-study-guide-ruby-advanced' data-visibility='hidden'>View this lesson on Learn.co</a>
